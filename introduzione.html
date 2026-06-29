@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -367,14 +369,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurazione-di-un-ambiente-di-sviluppo.html" class="md-nav__link">
+      <a href="configurazione-di-un-ambiente-di-lavoro.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Configurazione di un ambiente di sviluppo
+    3. Configurazione di un ambiente di lavoro
   
 
     
@@ -421,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="risolvere-i-tre-problemi-con-chatgpt.html" class="md-nav__link">
+      <a href="risoluzione-dei-tre-problemi-con-chatgpt.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Risolvere i tre problemi con ChatGPT
+    5. Risoluzione dei tre problemi con ChatGPT
   
 
     
@@ -621,17 +623,19 @@
 
 
 <h1 id="1-introduzione">1. <span style="color: #0f4761">Introduzione</span></h1>
-<p>Il PDF di questo documento è disponibile |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQBhFo6T0WyOS7aD3iIRLYDKAS5PU-pHnDVEsuiFACz79qw?e=cI7fGE">QUI</a>|.</p>
-<p>Gli esempi di questo documento sono disponibili |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCJKzPOuuxPQoeYTmiWgRfEAfUA0rFUrI6zbBnqddwzLiE?e=1tIRfz">QUI</a>|.</p>
-<p>Qui proponiamo di riprendere un problema presentato nel 2020 nel corso [<a href="https://stahe.github.io/it-python-flask-sept-2020/"><u><span style="color: #0563c1">python3-flask-2020</span></u></a>]. Quel corso era basato su un calcolo semplificato delle imposte per l&#x27;anno 2019. È stato sviluppato uno script Python per risolvere il problema, che è stato poi adattato in diverse versioni (18) fino a quando il calcolo delle imposte non è stato implementato in un&#x27;applicazione web MVC.</p>
-<p>Qui, miriamo a dimostrare che lo script iniziale di calcolo delle imposte può ora essere generato da strumenti di IA (Intelligenza Artificiale). Abbiamo utilizzato sette strumenti: ChatGPT, Grok, Gemini, MistralAI, DeepSeek, ClaudeAI e Perplexity. Ce ne sono altri.</p>
-<p>Questo documento non richiede necessariamente la conoscenza del linguaggio Python. I sette strumenti dovrebbero generare uno script Python che inizialmente includa 11 test unitari e, alla fine, 25 test. È sufficiente caricare questo codice in un ambiente di sviluppo Python, eseguirlo e verificare che i test abbiano esito positivo. Il codice generato può quindi essere considerato &quot;probabilmente corretto&quot;. Gli utenti Python esamineranno il codice più da vicino e noteranno che gli script Python generati sono generalmente scritti molto bene.</p>
-<p>Inoltre, questo documento mostra che gli strumenti di IA utilizzati sono abbastanza facili da usare e che l&#x27;interazione tra l&#x27;utente (voi) e lo strumento di IA non è diversa da quella tra un insegnante e uno studente.</p>
-<p>Questo documento è stato scritto nel settembre 2025. L&#x27;IA si sta evolvendo rapidamente ed è possibile che le schermate riportate di seguito diventino presto obsolete. Se ponete le stesse domande presenti in questo documento, è molto probabile che otterrete risposte diverse da quelle fornite qui. È sufficiente seguire la procedura per perfezionare le vostre istruzioni, mostrata qui, per aiutare l&#x27;IA.</p>
-<p>Puoi scaricare il codice e i file per questo tutorial all&#x27;indirizzo: [<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCJKzPOuuxPQoeYTmiWgRfEAfUA0rFUrI6zbBnqddwzLiE?e=1tIRfz"><u><span style="color: #0563c1">Genera uno script Python con strumenti di IA</span></u></a>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006470000042267BF5F4A.png" width="484" height="319" style="display:inline-block; margin:4px;width:12.801cm;height:8.428cm;" class="odt-zoomable" data-zoom-src="images/10000000000006470000042267BF5F4A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p>Il codice PDF di questo documento è disponibile |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQBhFo6T0WyOS7aD3iIRLYDKAS5PU-pHnDVEsuiFACz79qw?e=w17m7L">QUI</a>|.</p>
+<p>Gli esempi tratti dal documento sono disponibili |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCJKzPOuuxPQoeYTmiWgRfEAfUA0rFUrI6zbBnqddwzLiE?e=6xROkE">QUI</a>|.</p>
+<p>Ci proponiamo qui di riprendere un problema esposto nel 2020 nel corso [python3-flask-2020]. Quel corso prendeva come base un calcolo semplificato delle imposte per l’anno 2019. È stato sviluppato uno script Python per risolvere il problema, poi declinato in diverse versioni (18) fino a integrare il calcolo dell’imposta in un’applicazione web MVC.</p>
+<p>In questa sede ci proponiamo di dimostrare che lo script iniziale per il calcolo dell’imposta può ora essere generato da strumenti di IA (Intelligenza Artificiale). Sono stati utilizzati sette strumenti: ChatGPT, Grok, Gemini, MistralAI, DeepSeek, ClaudeAI, Perplexity. Ne esistono altri.</p>
+<p>Il documento non richiede necessariamente la conoscenza del linguaggio Python. I sette strumenti devono generare uno script Python che contenga inizialmente 11 test unitari e, alla fine, 25 test. È sufficiente caricare questo codice in un ambiente di lavoro Python, eseguirlo e verificare che i test abbiano esito positivo. A quel punto, il codice generato può essere considerato «probabilmente corretto». L’utente Python si interesserà maggiormente al codice stesso e si accorgerà che gli script Python generati sono in genere scritti molto bene.</p>
+<p>Inoltre, questo documento dimostra che gli strumenti IA utilizzati sono piuttosto facili da usare e che il dialogo tra l’utente (voi) e lo strumento IA non è diverso da quello che un insegnante avrebbe con il proprio allievo o studente.</p>
+<p>Questo documento è stato redatto nel settembre 2025. Il IA si evolve rapidamente ed è possibile che le schermate riportate di seguito diventino presto obsolete. Se ponete le stesse domande presenti nel documento, è molto probabile che otteniate risposte diverse da quelle riportate qui. Seguite semplicemente il processo di perfezionamento delle vostre istruzioni, illustrato qui, per aiutare l’IA.</p>
+<p>È possibile scaricare i codici e i file di questo tutorial all’indirizzo: [<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCJKzPOuuxPQoeYTmiWgRfEAfUA0rFUrI6zbBnqddwzLiE?e=6xROkE">QUI</a>]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000006470000042267BF5F4A.png" width="484" height="319" style="display:inline-block; margin:4px;width:12.801cm;height:8.43cm;" class="odt-zoomable" data-zoom-src="images/10000000000006470000042267BF5F4A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000614000001879A2B7D9E.png" width="465" height="117" style="display:inline-block; margin:4px;width:12.3cm;height:3.09cm;" class="odt-zoomable" data-zoom-src="images/1000000000000614000001879A2B7D9E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000614000001879A2B7D9E.png" width="465" height="117" style="display:inline-block; margin:4px;width:12.3cm;height:3.09cm;" class="odt-zoomable" data-zoom-src="images/1000000000000614000001879A2B7D9E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
+
+<p>Il PDF di questo documento è disponibile all’indirizzo |ICI|.</p>
 
 
 
